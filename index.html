@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/css/style.css">
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var userScroll = 0;
+
+        $(document).scroll(function(){
+          var scrollPosition = $(this).scrollTop();
+          console.log(`${scrollPosition} || ${userScroll}`);
+          if(scrollPosition - userScroll > 30 && scrollPosition < 40) {
+            // $('#title').css('display','none').animate({opacity:0},1000);
+            $('#title').fadeOut();
+            userScroll = scrollPosition;
+          } else if(userScroll - scrollPosition > 30) {
+            // $('#title').css('display','block').animate({opacity:1.0}),2000);
+            $('#title').fadeIn();
+            userScroll = scrollPosition;
+          }
+        });
+    </script>
   </head>
   <body>
     <video src="./resources/videos/Clip2.mp4" preload="auto" autoplay loop id="background-video">Video not supported.</video>
@@ -48,6 +69,12 @@
             </ul>
           </div>
         </nav>
+    <section id="title" class="container-fluid">
+      <div class="container">
+        <h1>CDP Studio</h1>
+        <p>Bring your blueprints to life.</p>
+      </div>
+    </section>
     <section id="main-info" class="container-fluid">
       <!-- Who We Are -->
       <article id="who-we-are" class="container-fluid article">

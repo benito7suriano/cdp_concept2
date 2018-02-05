@@ -43,10 +43,40 @@ nav #logo {
   min-height: 100%;
 }
 
+/* Title */
+#title {
+  position: fixed;
+  top: 28rem;
+  width:100%;
+  margin-bottom: 2rem;
+  padding: 0;
+  display: block;
+}
+
+#title .container {
+  margin-right: 0;
+  padding-right: 6rem;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#title h1 {
+  font-size: 5rem;
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+
+#title p {
+  font-size: 1.5rem;
+  color: grey;
+  text-align: right;
+  padding-bottom: 2rem;
+}
 /* Main Info Section */
 #main-info {
   position: relative;
-  top: 90rem;
+  top: 40rem;
   margin-bottom: 2rem;
   padding: 0;
 }
@@ -76,7 +106,7 @@ nav #logo {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 90rem;
+  top: 40rem;
 }
 
 #projects h1 {
