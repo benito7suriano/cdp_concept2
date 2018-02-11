@@ -17,7 +17,7 @@
         $(document).scroll(function(){
           var scrollPosition = $(this).scrollTop();
           console.log(`${scrollPosition} || ${userScroll}`);
-          if(scrollPosition - userScroll > 30 && scrollPosition < 100) {
+          if(scrollPosition - userScroll > 30 && scrollPosition < 50) {
             // $('#title').css('display','none').animate({opacity:0},1000);
             $('#title').fadeOut();
             userScroll = scrollPosition;
